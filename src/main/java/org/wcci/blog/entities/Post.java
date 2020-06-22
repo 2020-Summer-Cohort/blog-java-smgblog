@@ -2,6 +2,8 @@ package org.wcci.blog.entities;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 
 @Entity
@@ -23,13 +25,13 @@ public class Post {
 
     protected Post(){}
 
-    public Post(String title, String body, Collection<Author> authors, LocalDateTime publishDate, Category category, Collection<Tag> tags) {
+    public Post(String title, String body, Collection<Author> authors, LocalDateTime publishDate, Category category, Tag... tags) {
         this.title = title;
         this.body = body;
         this.authors = authors;
         this.publishDate = publishDate;
         this.category = category;
-        this.tags = tags;
+        this.tags = new ArrayList<>(Arrays.asList(tags));
     }
 
     public String getTitle() {

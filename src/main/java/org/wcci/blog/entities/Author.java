@@ -18,10 +18,8 @@ public class Author {
 
     protected Author(){}
 
-    public Author(long id, String name, Collection<Post> posts) {
-        this.id = id;
+    public Author(String name) {
         this.name = name;
-        this.posts = posts;
     }
 
     public String getName() {

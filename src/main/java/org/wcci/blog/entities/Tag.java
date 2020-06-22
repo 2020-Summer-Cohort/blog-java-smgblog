@@ -17,9 +17,8 @@ public class Tag {
 
     protected Tag(){}
 
-    public Tag(String name, Collection<Post> posts) {
+    public Tag(String name) {
         this.name = name;
-        this.posts = posts;
     }
 
     public String getName() {
