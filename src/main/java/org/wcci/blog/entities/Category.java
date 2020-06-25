@@ -13,7 +13,7 @@ public class Category {
     @GeneratedValue
     private long id;
     private String name;
-    @OneToMany
+    @OneToMany(mappedBy = "category")
     private Collection<Post> posts;
 
     protected Category(){}
