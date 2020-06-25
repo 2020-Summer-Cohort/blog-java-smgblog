@@ -12,7 +12,7 @@
 </header>
 <body>
 <p th:each="post : ${post.authors}" th:text="${post.name}"></p>
-
+<p th:text="${post.publishDate}"></p>
 <p th:text="${post.body}"></p>
 
 <li th:each="tag: ${post.tags}">

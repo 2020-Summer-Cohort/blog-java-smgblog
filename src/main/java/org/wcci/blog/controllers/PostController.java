@@ -15,7 +15,7 @@ public class PostController {
     PostStorage postStorage;
 
     @GetMapping("posts/{title}")
-    public String showSingleReview(@PathVariable String title, Model model) {
+    public String showSinglePost(@PathVariable String title, Model model) {
         model.addAttribute("post", postStorage.findByTitle(title));
         return "post-template";
     }

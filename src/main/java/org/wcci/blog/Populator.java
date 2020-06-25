@@ -12,6 +12,7 @@ import org.wcci.blog.storage.repositories.CategoryRepository;
 import org.wcci.blog.storage.repositories.PostRepository;
 import org.wcci.blog.storage.repositories.TagRepository;
 
+import javax.persistence.Entity;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -47,15 +48,13 @@ public class Populator implements CommandLineRunner {
             authors.add(author2);
 
        ArrayList<Author> authors2 = new ArrayList<>();
-            authors.add(author2);
-            authors.add(author3);
+            authors2.add(author2);
+            authors2.add(author3);
 
         Tag tag1 = new Tag("#fun");
         Tag tag2 = new Tag("#natureisbeautiful");
         tagRepo.save(tag1);
         tagRepo.save(tag2);
-
-
 
         Post post1 = new Post("My Trip to Toronto", "Body of blog post", authors, LocalDateTime.parse("2007-12-03T00:00:00"), category1, tag1, tag2);
         Post post2 = new Post("My Trip to NYC", "Body of blog post 2", authors2, LocalDateTime.parse("2007-12-03T00:00:00"), category2, tag1);
