@@ -61,4 +61,5 @@ public class Post {
     public Collection<Tag> getTags() {
         return tags;
     }
+
 }

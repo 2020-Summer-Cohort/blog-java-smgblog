@@ -20,4 +20,7 @@ public class TagStorage {
     public Tag findByName(String name) {
         return tagRepo.findByName(name);
     }
+
+    public Tag findByID(Long id){ return tagRepo.findById(id).get();
+    }
 }

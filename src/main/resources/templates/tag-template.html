@@ -4,20 +4,17 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>My Blog</title>
+    <title>Hashtags</title>
 </head>
 <header>
-    <h1 th:text="${category.name}">
-</h1>
+    <h2 th:text="${tag.name}">
+    </h2>
 </header>
 <body>
-<main>
-<ul>
-    <li th:each="post: ${category.posts}">
-    <a  th:text= "${post.title}" th:href="@{'/posts/'+${post.title}}"></a>
-    </li>
-    </ul>
-</main>
+<li href th:each="post : ${tag.posts}">
+    <a th:text="${post.title}" th:href="@{'/posts/'+${post.title}}">
+    </a>
+</li>
 </body>
 <footer><a href="/categories">Back To Home</a>
 </footer>

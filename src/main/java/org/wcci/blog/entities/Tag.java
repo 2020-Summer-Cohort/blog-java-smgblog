@@ -29,4 +29,8 @@ public class Tag {
     public Collection<Post> getPosts() {
         return posts;
     }
+
+    public long getId() {
+        return id;
+    }
 }
