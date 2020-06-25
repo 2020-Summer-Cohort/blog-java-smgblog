@@ -11,6 +11,7 @@ public class Tag {
 
     @Id
     @GeneratedValue
+    private long id;
     private String name;
     @ManyToMany(mappedBy = "tags")
     private Collection<Post> posts;
