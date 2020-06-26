@@ -22,6 +22,10 @@ public class AuthorStorage {
         public Author findByName(String name) {
             return authorRepo.findByName(name);
         }
+
+    public Author findById(Long authorId) {
+            return authorRepo.findById(authorId).get();
     }
+}
 
 

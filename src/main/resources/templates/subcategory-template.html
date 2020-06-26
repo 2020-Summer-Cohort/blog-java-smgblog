@@ -4,6 +4,9 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link href="/layout.css" rel="stylesheet"/>
+    <link href="/style.css" rel="stylesheet"/>
+
     <title>My Blog</title>
 </head>
 <header>
@@ -17,6 +20,16 @@
     <a  th:text= "${post.title}" th:href="@{'/posts/'+${post.title}}"></a>
     </li>
     </ul>
+
+    <p>Add a new post here:</p>
+    <form action="/post/add" method="POST">
+        <label for="new-post__name-input"></label>
+        <input type="text" name="title" id="new-post__name-input" placeholder="Enter post title">
+        <label for="new-post__description-input"></label>
+        <input type="text" name="body" id="new-post__description-input" placeholder="Enter content here">
+        <input type="hidden" name="categoryId" th:value="${category.id}">
+        <button type="submit">Submit</button>
+    </form>
 </main>
 </body>
 <footer><a href="/categories">Back To Home</a>

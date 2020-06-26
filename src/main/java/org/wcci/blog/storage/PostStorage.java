@@ -2,7 +2,6 @@ package org.wcci.blog.storage;
 
 import org.springframework.stereotype.Service;
 import org.wcci.blog.entities.Post;
-import org.wcci.blog.storage.repositories.CategoryRepository;
 import org.wcci.blog.storage.repositories.PostRepository;
 
 @Service
@@ -22,4 +21,5 @@ public class PostStorage {
         return postRepo.findByTitle(title);
     }
 
+    public void savePost(Post post) { postRepo.save(post); }
 }

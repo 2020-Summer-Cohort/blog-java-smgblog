@@ -4,7 +4,7 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link href="/layout.css" rel="stylesheet"/>
+    <link href="/layout.css"  rel="stylesheet"/>
     <link href="/style.css" rel="stylesheet"/>
 
     <title th:text="${post.title}"></title>
@@ -14,8 +14,7 @@
     </h2>
 </header>
 <body>
-<p th:each="post : ${post.authors}" th:text="${post.name}" th:href="@{'/hashtags/'+${hashtags.id}}></p>
-
+<p th:each="post : ${post.authors}" th:text="${post.name}"></p>
 <p th:text="${post.publishDate}"></p>
 <p th:text="${post.body}"></p>
 

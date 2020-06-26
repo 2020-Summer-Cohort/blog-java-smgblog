@@ -34,6 +34,13 @@ public class Post {
         this.tags = new ArrayList<>(Arrays.asList(tags));
     }
 
+    public Post(String title, String body, Category category){
+        this.title = title;
+        this.body = body;
+        this.category = category;
+
+    }
+
     public String getTitle() {
         return title;
     }
@@ -61,5 +68,6 @@ public class Post {
     public Collection<Tag> getTags() {
         return tags;
     }
+
 
 }
