@@ -23,4 +23,8 @@ public class TagStorage {
 
     public Tag findByID(Long id){ return tagRepo.findById(id).get();
     }
+
+    public void saveTag(Tag tagToAdd) {
+        tagRepo.save(tagToAdd);
+    }
 }

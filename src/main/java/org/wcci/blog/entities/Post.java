@@ -70,4 +70,7 @@ public class Post {
     }
 
 
+    public void addTag(Tag tagToAdd) {
+        tags.add(tagToAdd);
+    }
 }
