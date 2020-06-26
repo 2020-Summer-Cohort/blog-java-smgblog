@@ -14,7 +14,11 @@
     </h2>
 </header>
 <body>
-<p th:each="post : ${post.authors}" th:text="${post.name}" th:href="@{'/hashtags/'+${hashtags.id}}></p>
+
+<li class="tags" th:each="author: ${post.authors}">
+    <a th:text="${author.name}" th:href="@{'/authors/'+${author.id}}" >
+    </a>
+</li>
 
 <p th:text="${post.publishDate}"></p>
 <p th:text="${post.body}"></p>

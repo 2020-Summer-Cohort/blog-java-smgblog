@@ -14,7 +14,7 @@
     </h2>
 </header>
 <body>
-<li class="tags" href th:each="post : ${tag.posts}">
+<li th:each="post : ${tag.posts}">
     <a th:text="${post.title}" th:href="@{'/posts/'+${post.title}}">
     </a>
 </li>
