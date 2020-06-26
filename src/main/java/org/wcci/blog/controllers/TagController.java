@@ -19,6 +19,12 @@ public class TagController {
     @Autowired
     PostStorage postStorage;
 
+    @GetMapping("hashtags")
+    public String showAllTags(Model model) {
+        model.addAttribute("tagNames", tagStorage.findAllTags());
+        return "alltags-template";
+    }
+
     @GetMapping("hashtags/{hashtagID}")
     public String showReviewsAssociatedWithHashtag(@PathVariable Long hashtagID, Model model) {
         model.addAttribute("tag", tagStorage.findByID(hashtagID));
@@ -26,12 +32,19 @@ public class TagController {
     }
 
     @PostMapping("hashtags/add")
-    public String addNewHashtag(String hashtagName, String title) {
+    public String addNewHashtagToReview(String hashtagName, String title) {
         Tag tagToAdd = new Tag(hashtagName);
         tagStorage.saveTag(tagToAdd);
         Post post = postStorage.findByTitle(title);
         post.addTag(tagToAdd);
         postStorage.savePost(post);
         return "redirect:/posts/" + title;
+    }
+
+    @PostMapping("hashtags/add-new")
+    public String addNewHashtag(String hashtagName) {
+        Tag newTag = new Tag(hashtagName);
+        tagStorage.saveTag(newTag);
+        return "redirect:/hashtags/";
     }
 }

@@ -27,7 +27,7 @@
     <a th:text="${tag.name}" th:href="@{'/hashtags/'+${tag.id}}" >
     </a>
 </li>
-<form action="/hashtags/add" method="POST" class="hashtag-input">
+<form action="/hashtags/add" method="POST">
     <label for="new-hashtags__name-input"></label>
     <input type="text" name="hashtagName" id="new-hashtags__name-input" placeholder="Enter A New Hashtag">
     <input type="hidden" name="title" th:value="${post.title}">

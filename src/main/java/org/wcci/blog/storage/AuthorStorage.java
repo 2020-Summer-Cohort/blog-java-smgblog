@@ -26,6 +26,9 @@ public class AuthorStorage {
     public Author findById(Long authorId) {
             return authorRepo.findById(authorId).get();
     }
+
+    public void save(Author newAuthor) { authorRepo.save(newAuthor);
+    }
 }
 
 
