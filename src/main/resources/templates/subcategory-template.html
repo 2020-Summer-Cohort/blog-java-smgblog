@@ -22,12 +22,23 @@
     </ul>
 
     <p>Add a new post here:</p>
+    <label for="authors">Choose an author:</label>
     <form action="/post/add" method="POST">
+    <select name="authors" id="authors" required>
+        <option th:each="author: ${authors}"
+                th:value="${author.name}" th:text="${author.name}"></option>
+    </select>
+    <label for="tags">Choose a tag:</label>
+    <select name="tags" id="tags" required>
+        <option th:each="tag: ${tags}"
+                th:value="${tag.name}" th:text="${tag.name}">
+        </option>
+    </select>
         <label for="new-post__name-input"></label>
         <input type="text" name="title" id="new-post__name-input" placeholder="Enter post title">
         <label for="new-post__description-input"></label>
         <input type="text" name="body" id="new-post__description-input" placeholder="Enter content here">
-        <input type="hidden" name="categoryId" th:value="${category.id}">
+        <input type="hidden" name="categoryName" th:value="${category.name}">
         <button type="submit">Submit</button>
     </form>
 </main>

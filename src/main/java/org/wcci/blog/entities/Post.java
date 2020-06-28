@@ -34,12 +34,14 @@ public class Post {
         this.tags = new ArrayList<>(Arrays.asList(tags));
     }
 
-    public Post(String title, String body, Category category){
+    public Post(String title, String body, Collection<Author> author, Collection<Tag> tag, Category category) {
         this.title = title;
         this.body = body;
+        this.authors = author;
+        this.tags = tag;
         this.category = category;
-
     }
+
 
     public String getTitle() {
         return title;

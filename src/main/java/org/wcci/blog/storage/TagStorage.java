@@ -21,6 +21,10 @@ public class TagStorage {
         return tagRepo.findByName(name);
     }
 
+    public boolean isTagExists(String name) {
+        return tagRepo.existsByName(name);
+    }
+
     public Tag findByID(Long id){ return tagRepo.findById(id).get();
     }
 

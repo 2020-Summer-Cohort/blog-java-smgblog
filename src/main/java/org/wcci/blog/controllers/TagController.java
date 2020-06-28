@@ -33,11 +33,18 @@ public class TagController {
 
     @PostMapping("hashtags/add")
     public String addNewHashtagToReview(String hashtagName, String title) {
-        Tag tagToAdd = new Tag(hashtagName);
-        tagStorage.saveTag(tagToAdd);
-        Post post = postStorage.findByTitle(title);
-        post.addTag(tagToAdd);
-        postStorage.savePost(post);
+        if(tagStorage.isTagExists(hashtagName)) {
+            Tag tag = tagStorage.findByName(hashtagName);
+            Post post = postStorage.findByTitle(title);
+            post.addTag(tag);
+            postStorage.savePost(post);
+        } else {
+            Tag tagToAdd = new Tag(hashtagName);
+            tagStorage.saveTag(tagToAdd);
+            Post post = postStorage.findByTitle(title);
+            post.addTag(tagToAdd);
+            postStorage.savePost(post);
+        }
         return "redirect:/posts/" + title;
     }
 
