@@ -56,8 +56,8 @@ public class Populator implements CommandLineRunner {
         tagRepo.save(tag1);
         tagRepo.save(tag2);
 
-        Post post1 = new Post("My Trip to Toronto", "Body of blog post", authors, LocalDateTime.parse("2007-12-03T00:00:00"), category1, tag1, tag2);
-        Post post2 = new Post("My Trip to NYC", "Body of blog post 2", authors2, LocalDateTime.parse("2007-12-03T00:00:00"), category2, tag1);
+        Post post1 = new Post("My Trip to Toronto", "In April of 2019, I spent a weekend in Toronto with some friends. We saw Toronto's tallest building, its oldest castle, and we tried out some local restaurants. We also stopped by Niagara Falls on the drive back home. I hope I get a chance to go back and explore the city some more soon.", authors, LocalDateTime.parse("2019-04-18T12:00:00"), category1, tag1, tag2);
+        Post post2 = new Post("My Trip to NYC", "Earlier this year, I spent a weekend in NYC with some friends. It wasn't my first time in NYC, but it was still a great experience. We went to Chinatown, Times Square, Central Park, and of course grabbed a slice of NY pizza. NYC has so much to offer that every trip is a great experience, and I can't wait for my next one.", authors2, LocalDateTime.parse("2020-02-03T11:00:00"), category2, tag1);
         postRepo.save(post1);
         postRepo.save(post2);
     }

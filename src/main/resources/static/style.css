@@ -1,94 +1,65 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');*/
-/** {*/
-/*    box-sizing: border-box;*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*}*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-/*:root {*/
-/*    --color1-dark-electric-blue: #546A7B;*/
-/*    --color2-manatee: #9EA3B0;*/
-/*    --color3-misty-rose: #9EA3B0*/
-/*}*/
+a {
+    border-radius: 25px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
 
-/*a {*/
-/*    border-radius: 25px;*/
-/*    background-color: var(--color3-misty-rose);*/
-/*    padding: 10px;*/
-/*    font-family: 'Poppins', sans-serif;*/
-/*}*/
+a:link {
+    color: black;
+    text-decoration: none;
+}
 
-/*a:link {*/
-/*    color: black;*/
-/*    text-decoration: none;*/
-/*}*/
+a:visited {
+    color: black;
+    text-decoration: none;
+}
 
-/*a:visited {*/
-/*    color: black;*/
-/*    text-decoration: none;*/
-/*}*/
+.categories {
+    display: inline-block;
+    font-size: xx-large;
+    font-family: 'Poppins', sans-serif;
+    justify-content: space-around;
+    padding: 20px;
+}
 
-/*.categories {*/
-/*    display: inline-block;*/
-/*    font-size: xx-large;*/
-/*    font-family: 'Poppins', sans-serif;*/
-/*    justify-content: space-around;*/
-/*    padding: 20px;*/
-/*}*/
-
-/*.container {*/
-/*    background-color: var(--color2-manatee);*/
-/*}*/
-
-/*.hashtags a {*/
-/*    font-family: 'Poppins', sans-serif;*/
-/*    background-color: var(--color1-dark-electric-blue);*/
-/*}*/
-
-/*.hashtag-input {*/
-/*    font-family: 'Poppins', sans-serif;*/
-/*    border: #285943;*/
-/*    border-radius: 5px;*/
-/*}*/
+.tag-input {
+    font-family: 'Poppins', sans-serif;
+    border: #285943;
+    border-radius: 5px;
+}
 
 
-/*header h1 {*/
-/*    font-family: 'Poppins', sans-serif;*/
-/*    font-size: 65px;*/
-/*}*/
+header h1 {
+    font-family: 'Poppins', sans-serif;
+}
 
-/*header h2 {*/
-/*    font-family: 'Poppins', sans-serif;*/
-/*    font-size: 40px;*/
-/*}*/
+header h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+}
 
-/*h3 {*/
-/*    border-radius: 25px;*/
-/*    font-family: 'Poppins', sans-serif;*/
-/*    background-color: var(--color3-misty-rose);*/
-/*}*/
+h3 {
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+}
 
-/*p {*/
-/*    background-color: var(--color3-misty-rose);*/
-/*    font-family: 'Poppins', sans-serif;*/
-/*    font-size: larger;*/
-/*}*/
+p {
+    font-family: 'Poppins', sans-serif;
+}
 
-/*.sub-category {*/
-/*    font-size: x-large;*/
-/*    padding: 10px;*/
-/*    justify-content: space-between;*/
-/*    border-radius: 25px;*/
+label {
+    font-family: 'Poppins', sans-serif;
+    font-size: smaller;
+}
 
-/*}*/
-/*.sub-category a{*/
-/*    border-radius: 25px;*/
-/*    padding: 20px;*/
-/*}*/
-
-/*li {*/
-/*    list-style-type: none;*/
-/*    padding: 10px;*/
-
-
-/*}*/
+li {
+    list-style-type: none;
+    padding: 10px;
+}

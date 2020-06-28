@@ -1,65 +1,76 @@
-/** {*/
-/*    box-sizing: border-box;*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*  }*/
-/*  */
-/*  a {*/
-/*    display: inline-block;*/
-/*    padding: 20px;*/
-/*  }*/
-/*  */
-/*  */
-/*    .container {*/
-/*      display: grid;*/
-/*      grid-template-columns: repeat(3fr);*/
-/*      grid-template-rows: 100px repeat(3, 100x) 150px;*/
-/*      grid-gap: 15px;*/
-/*      text-align: center;*/
-/*      margin: 0 auto;*/
-/*      width: 1000px;*/
-/*    }*/
-/*  */
-/*  */
-/*   footer{*/
-/*     padding: 10px;*/
-/*   }*/
-/*  footer a{*/
-/*    padding: 10px;*/
-/*    text-decoration: underline;*/
-/*    background-color: #B0B5BF;*/
-/*  }*/
-/*  */
-/*  img {*/
-/*    padding: 10px;*/
-/*  }*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-/*  */
-/*  header {*/
-/*    display: inline-block;*/
-/*    padding: 5px;*/
-/*  }*/
-/*  */
-/*  h3 {*/
-/*    display: inline-block;*/
-/*    padding: 10px;*/
-/*  }*/
-/*  */
-/*  .tags {*/
-/*    padding: 10px;*/
-/*    list-style-type: none;*/
-/*  }*/
-/*  */
-/*  .hashtags li {*/
-/*    padding: 10px;*/
-/*  }*/
-/*  */
-/*  img{*/
-/*    height: 500px;*/
-/*    width: 400px;*/
-/*  }*/
-/*  */
-/*  p {*/
-/*    display: inline-block;*/
-/*    padding: 10px;*/
-/*  }*/
+  a {
+    display: inline-block;
+    padding: 20px;
+  }
+
+  .author-list {
+      display: flex;
+      justify-content: center;
+     padding-left: 100px;
+      padding-right: 100px;
+  }
+    .home-container {
+        background-color: lavender;
+      display: grid;
+      grid-template-columns: repeat(3fr);
+      grid-template-rows: repeat(4fr);
+      grid-gap: 15px;
+      text-align: center;
+      margin: 0 auto;
+      width: 1000px;
+    }
+
+    .post-input {
+        display: grid;
+        grid-template-rows: repeat(4fr);
+    }
+
+  .container {
+      background-color: lavender;
+      text-align: center;
+      margin: 0 auto;
+      width: 1000px;
+  }
+
+  .item {
+      padding-bottom: 15px;
+  }
+
+   footer{
+     padding: 10px;
+   }
+
+  footer a{
+    padding: 10px;
+    text-decoration: underline;
+  }
+
+  header {
+    display: inline-block;
+    padding: 5px;
+  }
+
+  .tags {
+    padding: 10px;
+    list-style-type: none;
+  }
+
+  .text-box {
+      height: 100px;
+      width: 300px;
+  }
+
+  p {
+    display: inline-block;
+    padding-left: 20px;
+  }
+
+  h1 {
+      padding-left: 20px;
+  }

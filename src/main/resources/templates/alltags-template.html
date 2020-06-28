@@ -4,21 +4,29 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link href="/layout.css" rel="stylesheet"/>
+    <link href="/style.css" rel="stylesheet"/>
     <title>Tags</title>
 </head>
+<div class="container">
 <header><h1>Tags</h1></header>
 <body>
+<div class="tags">
 <ul>
     <li th:each="tag: ${tagNames}">
         <a th:text= "${tag.name}" th:href="@{'/hashtags/'+${tag.id}}"></a>
     </li>
 </ul>
+</div>
+<div class="tag-input">
 <form action="/hashtags/add-new" method="POST">
     <label for="new-hashtags__name-input"></label>
     <input type="text" name="hashtagName" id="new-hashtags__name-input" placeholder="Enter A New Hashtag">
     <input type="hidden" name="tag" th:value="${tagNames}">
     <button type="submit">Submit</button>
 </form>
+</div>
 </body>
-<footer>    <a href="/categories">Back To Home</a></footer>
+<footer><a href="/categories">Back To Home</a></footer>
+</div>
 </html>
